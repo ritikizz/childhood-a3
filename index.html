@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Đố Thầy Đoán Tên Học Sinh Qua Ảnh Hồi Bé</title>
+  <title>Đố Thầy Đoán Tên Học Sinh Qua Ảnh Hồi Bé • Lớp 11A3</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -131,7 +131,7 @@
             Đố Thầy Đoán Tên Học Sinh
           </h1>
           <p class="text-xs sm:text-sm text-amber-700 font-medium">
-            Album ảnh hồi bé • Kỷ yếu lớp mình (34 thành viên)
+            Album ảnh hồi bé • Lớp 11A3 (NH 2026 - 2027 • 34 thành viên)
           </p>
         </div>
       </div>
@@ -261,7 +261,7 @@
                   id="name-search-input"
                   type="text"
                   autocomplete="off"
-                  placeholder="Gõ nhanh để tìm tên (ví dụ: Huy, Tuyết...)"
+                  placeholder="Gõ tên hoặc STT để tìm nhanh (ví dụ: Huy, 12...)"
                   class="w-full pl-10 pr-9 py-2.5 rounded-xl border border-amber-200 bg-cream-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 text-sm text-stone-800 placeholder:text-stone-400 transition-all"
                 />
                 <button
@@ -276,12 +276,12 @@
                 </button>
               </div>
 
-              <!-- Danh sách 34 tên theo bảng chữ cái tiếng Việt -->
+              <!-- Danh sách 34 học sinh theo đúng thứ tự STT lớp 11A3 -->
               <div
                 id="name-list-box"
                 class="mt-2 max-h-56 overflow-y-auto custom-scrollbar rounded-2xl border border-amber-200/80 bg-white divide-y divide-amber-50 shadow-inner"
                 role="listbox"
-                aria-label="Danh sách 34 học sinh"
+                aria-label="Danh sách 34 học sinh Lớp 11A3"
               ></div>
             </div>
 
@@ -524,49 +524,45 @@
     }
 
     /**
-     * DANH SÁCH CHÍNH XÁC 34 HỌC SINH & LINK ẢNH i.ibb.co
+     * DANH SÁCH CHÍNH XÁC 34 HỌC SINH LỚP 11A3 (NH: 2026 - 2027)
+     * Giữ nguyên đúng thứ tự STT từ 1 đến 34 theo sổ điểm lớp
      */
     const STUDENTS_DATA = [
-      { id: 1, name: "Bùi Tuyết Anh", url: "https://i.ibb.co/wNnvgkNK/B-i-Tuy-t-Anh.jpg" },
-      { id: 2, name: "Đặng Lê Ngọc Trọng", url: "https://i.ibb.co/W4d9pVNm/ng-L-Ng-c-Tr-ng.jpg" },
-      { id: 3, name: "Đoàn Nguyễn Phương Nhi", url: "https://i.ibb.co/gKBmgzW/o-n-Nguy-n-Ph-ng-Nhi.jpg" },
-      { id: 4, name: "Đoàn Thanh Huy", url: "https://i.ibb.co/wZ62kzP4/o-n-Thanh-Huy.jpg" },
-      { id: 5, name: "Đỗ Phan Hoài Anh", url: "https://i.ibb.co/wZMQS7wL/Phan-Ho-i-Anh.jpg" },
-      { id: 6, name: "Huỳnh Gia Khiêm", url: "https://i.ibb.co/0jMqhN4M/Hu-nh-Gia-Khi-m.jpg" },
-      { id: 7, name: "Lâm Minh Nguyễn Khang", url: "https://i.ibb.co/BHdXBCmp/L-m-Minh-Nguy-n-Khang.jpg" },
-      { id: 8, name: "Lê Đình Nhật Bằng", url: "https://i.ibb.co/fYmPCr0c/L-nh-Nh-t-B-ng.jpg" },
-      { id: 9, name: "Lê Hoàng Nhựt Huy", url: "https://i.ibb.co/JWqQSmxZ/L-Ho-ng-Nh-t-Huy.jpg" },
-      { id: 10, name: "Lê Huỳnh Hoàng Huy", url: "https://i.ibb.co/mYdmy5R/L-Hu-nh-Ho-ng-Huy.jpg" },
-      { id: 11, name: "Lê Nguyễn Ngọc Bích", url: "https://i.ibb.co/chCHFJC1/L-Nguy-n-Ng-c-B-ch.jpg" },
-      { id: 12, name: "Lê Tuấn Kiệt", url: "https://i.ibb.co/99PBLNrT/L-Tu-n-Ki-t.jpg" },
-      { id: 13, name: "Lê Trần Duy Phước", url: "https://i.ibb.co/CpzScCMD/L-Tr-n-Duy-Ph-c.jpg" },
-      { id: 14, name: "Ngô Gia Đạt", url: "https://i.ibb.co/GQcYNCnk/Ng-Gia-t.jpg" },
-      { id: 15, name: "Nguyễn Đoàn Bảo Chi", url: "https://i.ibb.co/JRcvH9MK/Nguy-n-o-n-B-o-Chi.jpg" },
-      { id: 16, name: "Nguyễn Hoàng Ngân Anh", url: "https://i.ibb.co/wFMLM3Xx/Nguy-n-Ho-ng-Ng-n-Anh.jpg" },
-      { id: 17, name: "Nguyễn Huỳnh Tuấn Anh", url: "https://i.ibb.co/yFR7MGFY/Nguy-n-Hu-nh-Tu-n-Anh.jpg" },
-      { id: 18, name: "Nguyễn Minh Tuyết", url: "https://i.ibb.co/v6LbC1NQ/Nguy-n-Minh-Tuy-t.jpg" },
-      { id: 19, name: "Nguyễn Ngọc Bích Trâm", url: "https://i.ibb.co/HTRPGzzx/Nguy-n-Ng-c-B-ch-Tr-m.jpg" },
-      { id: 20, name: "Nguyễn Phượng Trinh", url: "https://i.ibb.co/y1VLxn6/Nguy-n-Ph-ng-Trinh.jpg" },
-      { id: 21, name: "Nguyễn Tuấn Anh", url: "https://i.ibb.co/ynYjQP1t/Nguy-n-Tu-n-Anh.jpg" },
-      { id: 22, name: "Nguyễn Tuấn Minh", url: "https://i.ibb.co/tMY98Phy/Nguy-n-Tu-n-Minh.jpg" },
-      { id: 23, name: "Nguyễn Tường Duy", url: "https://i.ibb.co/xq3GkK5D/Nguy-n-T-ng-Duy.jpg" },
-      { id: 24, name: "Nguyễn Thị Mộng Tuyền", url: "https://i.ibb.co/9H08gSZc/Nguy-n-Th-M-ng-Tuy-n.jpg" },
-      { id: 25, name: "Nguyễn Thị Như Ý", url: "https://i.ibb.co/tMrMy8Rd/Nguy-n-Th-Nh.jpg" },
-      { id: 26, name: "Nguyễn Thị Tường Vy", url: "https://i.ibb.co/HL3wswSZ/Nguy-n-Th-T-ng-Vy.jpg" },
-      { id: 27, name: "Phạm Đào Kim Thư", url: "https://i.ibb.co/xq6GJrx1/Ph-m-o-Kim-Th.jpg" },
-      { id: 28, name: "Phạm Quỳnh Giang", url: "https://i.ibb.co/zHG7Z0wS/Ph-m-Qu-nh-Giang.jpg" },
-      { id: 29, name: "Phạm Tấn Tài", url: "https://i.ibb.co/xTKFF73/Ph-m-T-n-T-i.jpg" },
-      { id: 30, name: "Phan Nguyễn Hoàng Thiện", url: "https://i.ibb.co/1YZSZgws/Phan-Nguy-n-Ho-ng-Thi-n.jpg" },
-      { id: 31, name: "Phan Trọng Phú", url: "https://i.ibb.co/Wp4dZtbD/Phan-Tr-ng-Ph.jpg" },
-      { id: 32, name: "Tôn Gia Nghi", url: "https://i.ibb.co/zhNF06bd/T-n-Gia-Nghi.jpg" },
-      { id: 33, name: "Trần Thanh Huy", url: "https://i.ibb.co/MyW82TzY/Tr-n-Thanh-Huy.jpg" },
-      { id: 34, name: "Võ Ngọc Thịnh", url: "https://i.ibb.co/prJDTLQj/V-Ng-c-Th-nh.jpg" }
+      { id: 1, name: "Bùi Tuyết Anh", url: "https://i.ibb.co/9kStdsPk/B-i-Tuy-t-Anh.jpg" },
+      { id: 2, name: "Đỗ Phan Hoài Anh", url: "https://i.ibb.co/hxyW7shp/Phan-Ho-i-Anh.jpg" },
+      { id: 3, name: "Nguyễn Hoàng Ngân Anh", url: "https://i.ibb.co/JRdRRSwM/Nguy-n-Ho-ng-Ng-n-Anh.jpg" },
+      { id: 4, name: "Nguyễn Huỳnh Tuấn Anh", url: "https://i.ibb.co/BVGjyCRY/Nguy-n-Hu-nh-Tu-n-Anh.jpg" },
+      { id: 5, name: "Nguyễn Tuấn Anh", url: "https://i.ibb.co/mF1gDGVk/Nguy-n-Tu-n-Anh.jpg" },
+      { id: 6, name: "Lê Đình Nhật Bằng", url: "https://i.ibb.co/spJ6ZV2X/L-nh-Nh-t-B-ng.jpg" },
+      { id: 7, name: "Lê Nguyễn Ngọc Bích", url: "https://i.ibb.co/V0JnsdBb/L-Nguy-n-Ng-c-B-ch.jpg" },
+      { id: 8, name: "Nguyễn Đoàn Bảo Chi", url: "https://i.ibb.co/S4h6fYgj/Nguy-n-o-n-B-o-Chi.jpg" },
+      { id: 9, name: "Nguyễn Tường Duy", url: "https://i.ibb.co/21WVnTkj/Nguy-n-T-ng-Duy.jpg" },
+      { id: 10, name: "Ngô Gia Đạt", url: "https://i.ibb.co/8LBR8BgH/Ng-Gia-t.jpg" },
+      { id: 11, name: "Phạm Quỳnh Giang", url: "https://i.ibb.co/wFG79G39/Ph-m-Qu-nh-Giang.jpg" },
+      { id: 12, name: "Đoàn Thanh Huy", url: "https://i.ibb.co/DHVj1Cb0/o-n-Thanh-Huy.jpg" },
+      { id: 13, name: "Lê Hoàng Nhựt Huy", url: "https://i.ibb.co/Z18Zyn9r/L-Ho-ng-Nh-t-Huy.jpg" },
+      { id: 14, name: "Lê Huỳnh Hoàng Huy", url: "https://i.ibb.co/qL60vbHc/L-Hu-nh-Ho-ng-Huy.jpg" },
+      { id: 15, name: "Trần Thanh Huy", url: "https://i.ibb.co/6RhZKVjS/Tr-n-Thanh-Huy.jpg" },
+      { id: 16, name: "Lâm Minh Nguyễn Khang", url: "https://i.ibb.co/nNGHjtp7/L-m-Minh-Nguy-n-Khang.jpg" },
+      { id: 17, name: "Huỳnh Gia Khiêm", url: "https://i.ibb.co/Q7LBfdLN/Hu-nh-Gia-Khi-m.jpg" },
+      { id: 18, name: "Lê Tuấn Kiệt", url: "https://i.ibb.co/JRkzfKh6/L-Tu-n-Ki-t.jpg" },
+      { id: 19, name: "Nguyễn Tuấn Minh", url: "https://i.ibb.co/FkYtSFbb/Nguy-n-Tu-n-Minh.jpg" },
+      { id: 20, name: "Tôn Gia Nghi", url: "https://i.ibb.co/SD0ZzB5J/T-n-Gia-Nghi.jpg" },
+      { id: 21, name: "Đoàn Nguyễn Phương Nhi", url: "https://i.ibb.co/CKV0d8xQ/o-n-Nguy-n-Ph-ng-Nhi.jpg" },
+      { id: 22, name: "Phan Trọng Phú", url: "https://i.ibb.co/RkjT3y8m/Phan-Tr-ng-Ph.jpg" },
+      { id: 23, name: "Lê Trần Duy Phước", url: "https://i.ibb.co/5hv0YdPs/L-Tr-n-Duy-Ph-c.jpg" },
+      { id: 24, name: "Phạm Tấn Tài", url: "https://i.ibb.co/HLYfQFpp/Ph-m-T-n-T-i.jpg" },
+      { id: 25, name: "Phan Nguyễn Hoàng Thiện", url: "https://i.ibb.co/qYKRjYr2/Phan-Nguy-n-Ho-ng-Thi-n.jpg" },
+      { id: 26, name: "Võ Ngọc Thịnh", url: "https://i.ibb.co/Z6k1LwLQ/V-Ng-c-Th-nh.jpg" },
+      { id: 27, name: "Phạm Đào Kim Thư", url: "https://i.ibb.co/60xLPJt1/Ph-m-o-Kim-Th.jpg" },
+      { id: 28, name: "Nguyễn Ngọc Bích Trâm", url: "https://i.ibb.co/5hTRryKS/Nguy-n-Ng-c-B-ch-Tr-m.jpg" },
+      { id: 29, name: "Nguyễn Phượng Trinh", url: "https://i.ibb.co/YBrT1rhY/Nguy-n-Ph-ng-Trinh.jpg" },
+      { id: 30, name: "Đặng Lê Ngọc Trọng", url: "https://i.ibb.co/tMDQ6pyQ/ng-L-Ng-c-Tr-ng.jpg" },
+      { id: 31, name: "Nguyễn Thị Mộng Tuyền", url: "https://i.ibb.co/Lzycft7M/Nguy-n-Th-M-ng-Tuy-n.jpg" },
+      { id: 32, name: "Nguyễn Minh Tuyết", url: "https://i.ibb.co/b5V8ZRyy/Nguy-n-Minh-Tuy-t.jpg" },
+      { id: 33, name: "Nguyễn Thị Tường Vy", url: "https://i.ibb.co/WvW99MD6/Nguy-n-Th-T-ng-Vy.jpg" },
+      { id: 34, name: "Nguyễn Thị Như Ý", url: "https://i.ibb.co/cSZYxndP/Nguy-n-Th-Nh.jpg" }
     ];
-
-    // Danh sách 34 tên sắp xếp theo thứ tự ABC tiếng Việt
-    const SORTED_NAMES = STUDENTS_DATA
-      .map(s => s.name)
-      .sort((a, b) => a.localeCompare(b, 'vi', { sensitivity: 'base' }));
 
     // Trạng thái trò chơi
     let shuffledQuestions = [];
@@ -756,6 +752,7 @@
       // Thẻ ảnh chính: không ẩn opacity:0, không gắn crossorigin hay referrerpolicy
       const img = document.createElement('img');
       img.src = optSrc;
+      img.loading = 'lazy';
       img.decoding = 'async';
       img.alt = `Ảnh hồi bé số ${currentIndex + 1}`;
       img.title = 'Bấm để phóng to ảnh';
@@ -805,22 +802,31 @@
     }
 
     /**
-     * Render danh sách 34 tên theo bảng chữ cái tiếng Việt (có tìm kiếm không dấu/có dấu)
+     * Render danh sách 34 học sinh theo đúng thứ tự STT lớp 11A3 (01 -> 34)
+     * Hỗ trợ tìm kiếm theo tên (có dấu/không dấu) hoặc theo STT
      */
     function renderNameList() {
-      const query = normalizeVietnamese(elSearchInput.value);
+      const rawQuery = elSearchInput.value.trim();
+      const query = normalizeVietnamese(rawQuery);
       const currentSelected = userAnswers[currentIndex];
 
-      const filteredNames = SORTED_NAMES.filter(name =>
-        normalizeVietnamese(name).includes(query)
-      );
+      const filteredStudents = STUDENTS_DATA.filter(student => {
+        if (!query) return true;
+        const sttStr = String(student.id);
+        const sttPadded = sttStr.padStart(2, '0');
+        return (
+          normalizeVietnamese(student.name).includes(query) ||
+          sttStr.includes(rawQuery) ||
+          sttPadded.includes(rawQuery)
+        );
+      });
 
       elNameListBox.innerHTML = '';
 
-      if (filteredNames.length === 0) {
+      if (filteredStudents.length === 0) {
         elNameListBox.innerHTML = `
           <div class="p-4 text-center text-sm text-stone-400">
-            Không tìm thấy tên học sinh nào khớp với "<strong>${escapeHtml(elSearchInput.value)}</strong>"
+            Không tìm thấy học sinh nào khớp với "<strong>${escapeHtml(elSearchInput.value)}</strong>"
           </div>
         `;
         return;
@@ -828,7 +834,9 @@
 
       const fragment = document.createDocumentFragment();
 
-      filteredNames.forEach(name => {
+      filteredStudents.forEach(student => {
+        const name = student.name;
+        const sttLabel = String(student.id).padStart(2, '0');
         const isSelectedHere = currentSelected === name;
         const usedNumbers = getUsedQuestionNumbersForName(name);
         const usedElsewhere = usedNumbers.filter(n => n !== currentIndex + 1);
@@ -839,7 +847,7 @@
         btn.setAttribute('aria-selected', isSelectedHere ? 'true' : 'false');
 
         btn.className = [
-          'w-full text-left px-3.5 py-2.5 text-sm flex items-center justify-between gap-2 transition-colors',
+          'w-full text-left px-3 py-2.5 text-sm flex items-center justify-between gap-2 transition-colors',
           isSelectedHere
             ? 'bg-emerald-50 text-emerald-900 font-bold'
             : usedElsewhere.length > 0
@@ -847,10 +855,28 @@
               : 'bg-white hover:bg-amber-50 text-stone-800 font-medium'
         ].join(' ');
 
+        // Nhóm STT + Họ và tên học sinh
+        const leftWrap = document.createElement('span');
+        leftWrap.className = 'flex items-center gap-2.5 min-w-0';
+
+        const sttBadge = document.createElement('span');
+        sttBadge.className = [
+          'inline-flex items-center justify-center w-6 h-6 rounded-lg text-[11px] font-bold shrink-0',
+          isSelectedHere
+            ? 'bg-emerald-500 text-white'
+            : usedElsewhere.length > 0
+              ? 'bg-stone-200 text-stone-600'
+              : 'bg-amber-100 text-amber-800'
+        ].join(' ');
+        sttBadge.textContent = sttLabel;
+
         const nameSpan = document.createElement('span');
         nameSpan.className = 'truncate';
         nameSpan.textContent = name;
-        btn.appendChild(nameSpan);
+
+        leftWrap.appendChild(sttBadge);
+        leftWrap.appendChild(nameSpan);
+        btn.appendChild(leftWrap);
 
         const badgeWrap = document.createElement('span');
         badgeWrap.className = 'flex items-center gap-1.5 shrink-0';
@@ -1111,6 +1137,7 @@
 
       const img = document.createElement('img');
       img.src = getOptimizedImageUrl(student.url, 1400);
+      img.loading = 'lazy';
       img.decoding = 'async';
       img.alt = 'Ảnh phóng to';
       img.className = 'max-w-full max-h-[88vh] w-auto h-auto object-contain rounded-2xl shadow-2xl';
